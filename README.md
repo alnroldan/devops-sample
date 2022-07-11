@@ -1,16 +1,16 @@
 # Basic Spring Boot Example
 
-This simple Maven project is importing JaCoCo's coverage report. For multi-module project example 
+This Spring Boot Security project has the implementaion of DevOps sample (under development) 
 see [multi-module Maven project](../maven-multimodule/README.md)
 
 ## Security Spring with API KEY Token
 
-* Build the project, execute all the tests and analyze the project with SonarQube Scanner for Maven(from root  of the project):
+* Build the project, use an API Key in header to authenticate:
 
 ```shell
-        mvn clean verify sonar:sonar
+        mvn clean install
 ```
 
 ## Documentation
 
-[SonarScanner for Maven](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/)
+[Spring Framework Reference](https://github.com/spring-guides/)
