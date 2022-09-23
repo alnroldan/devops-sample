@@ -1,0 +1,38 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: java-aks
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appjava
+  namespace: java-aks
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: appjava
+    spec:
+      containers:
+      - name: appjava
+        image: alnroldan/devops-sample:0.0.1-SNAPSHOT
+        ports:
+        - containerPort: 8080
+  selector:
+    matchLabels:
+      app: appjava
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: appjava
+  namespace: java-aks
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    app: appjava

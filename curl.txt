@@ -1,4 +1,6 @@
-curl -X POST http://localhost:8080/DevOps -H 'Content-type:application/json' -d '{"message": "Hi!", "to": "Joseph", "from": "Alex"}'
+curl -X POST http://localhost:8080/DevOps  -H 'Content-type:application/json' -d '{"message": "Hi!", "to": "Joseph", "from": "Alex"}'
+
+curl -X POST http://localhost:8080/DevOps -H 'X-API-KEY: abc'  -H 'Content-type:application/json' -d '{"message": "Hi!", "to": "Joseph", "from": "Alex"}'
 
 curl -X POST localhost:8080/DevOps -H 'Content-type:application/json' -d '{"message": "Hi!", "to": "Joseph", "from": "Alex"}'
 
